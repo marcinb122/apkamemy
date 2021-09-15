@@ -1,0 +1,138 @@
+section {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  max-width: 50%;
+  grid-gap: 0.5em;
+  background-color: rgb(43, 43, 43);
+  margin: 5% 5%;
+  padding-top: 2%;
+  transform: translateX(40%);
+  border-radius: 1%;
+  border: 5px solid rgb(255, 174, 0);
+}
+
+h1,
+img,
+main {
+  grid-column: 2;
+}
+
+h1 {
+  color: rgb(255, 174, 0);
+}
+
+main {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+h1 span {
+  display: block;
+  text-align: center;
+  transform: translate(0, -50%);
+}
+
+.vote-panel {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.vote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  flex-wrap: nowrap;
+  width: 40%;
+  height: 25%;
+  background-color: rgb(43, 43, 43);
+}
+
+.counter {
+  color: rgb(255, 174, 0);
+  font-size: 2rem;
+  transform: translateY(20%);
+  cursor: default;
+}
+
+.btn-vote {
+  border: none;
+  background-color: rgb(43, 43, 43);
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+
+.star {
+  background-color: rgb(43, 43, 43);
+  color: red;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: translateX(150%);
+}
+
+img {
+  border: 3px rgb(255, 174, 0) solid;
+}
+
+@media (max-width: 1100px) {
+  section {
+    margin-top: 8%;
+  }
+  .counter,
+  .star {
+    font-size: 1.6rem;
+  }
+  .btn-vote {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-top: 20%;
+    max-width: 60%;
+    transform: translateX(30%);
+  }
+  .counter,
+  .star {
+    font-size: 1.4rem;
+  }
+  .btn-vote {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 550px) {
+  section {
+    margin-top: 30%;
+    max-width: 80%;
+    transform: translateX(5%);
+  }
+  .counter,
+  .star {
+    font-size: 1.4rem;
+  }
+  .btn-vote {
+    font-size: 1.5rem;
+  }
+  .fa-balance-scale {
+    display: none;
+  }
+}
